@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Responsive Design</title>
+        <style>
+            *{
+                margin: 0px;
+                padding: 0px;
+                box-sizing: border-box;
+            }
+
+            body{
+                background-color: black;
+            }
+
+            #allcontent{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            header, footer{
+                width: 100%;
+                height: 70px;
+                background-color: aqua;
+            }
+
+            #body{
+                height: 700px;
+                width: 800px;
+                display: flex;
+                flex-direction: column;
+            }
+
+            #Hero{
+                width: auto;
+                height: 250px;
+                background-color: red;
+            }
+
+            #Hero, article, aside{
+                margin: 10px;
+            }
+
+            section{
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                height: 100%;
+            }
+
+            article{
+                flex-grow: 2;
+                background-color: green;
+                margin: 10px;
+            }
+
+            aside{
+                flex-grow: 1;
+                background-color: blueviolet;
+                margin: 10px;
+            }
+
+            footer{
+                background-color: gray;
+            }
+
+            @media (max-width:500px){
+                section{
+                    flex-direction: column;
+                }
+
+                #Hero, article, aside{
+                    margin: 5px;
+                }
+
+                header{
+                    margin-bottom: 5px;
+                }
+
+                footer{
+                    margin-top: 5px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="allcontent">
+            <header></header>
+            <div id="body">
+                <div id="Hero"></div>
+                <section>
+                    <article></article>
+                    <aside></aside>
+                </section>
+            </div>
+            <footer></footer>
+        </div>
+    </body>
+</html>
